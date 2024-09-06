@@ -22,7 +22,7 @@ class Profile extends HTMLElement {
     attributeChangedCallback(propName: Attribute, oldValue: string | undefined, newValue: string | undefined) {
         switch (propName) {
             case Attribute.uid: // If the value of the property is a number, it is converted to a number.
-                this.uid = newValue ? Number(newValue) : undefined;
+                this.uid = newValue ? Number(newValue) : undefined; // Ternary operator. If the value is undefined, it is assigned as undefined.
                 break;
 
             default:
